@@ -8,6 +8,7 @@
 
 import time
 
+# Decorator to measure the execution time of a function
 def measure_time(function):
     def wrapper(*args, **kwargs):
         start = time.time()
@@ -17,6 +18,7 @@ def measure_time(function):
         return result
     return wrapper
 
+# Use the decorator to measure the execution time of a function
 @measure_time
 def calculations():
     total = 0
